@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="generatePassword.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+
+          <h1 class="header">Password Generator</h1>
+
+      </div>
+
+      <div class="lengthRange">
+        <span>Choose the length of the password</span>
+        <input class="inputRange" type="range" min="1" max="32" oninput="document.querySelector('#rangeOutput').innerText=this.value">
+        <span id="rangeOutput"></span>
+      </div>
+
+      <div class="upperCaseDiv">
+        <span>Check if you wanna include the uppercase letters</span>
+        <label class="labelUpper">
+          <input type="checkbox" class="inputUpper">
+          <span class="spanUpper"></span>
+        </label>
+      </div>
+
+      <div class="lowerCaseDiv">
+        <span>Check if you wanna include the lower letters</span>
+        <label class="labelower">
+          <input type="checkbox" class="inputlower">
+          <span class="spanlower"></span>
+        </label>
+      </div>
+      <div class="divOutput">
+        <span>
+          <button onclick="generate()">Generate</button>
+          
+        </span>
+      </div>
+
+        <h1 class="output"></h1>
+        <div class="cp">
+          <button class="copyButton" onclick="copy()">copy</button>
+        </div>
+
+    </div>
+    <script src="generatePassWord.js"></script>
+  </body>
+</html>
